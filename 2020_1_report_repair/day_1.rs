@@ -29,7 +29,7 @@ fn load_file_to_ht(ht: &mut HashMap<i16, i16>, s: &str) -> Vec<i16> {
 }
 
 fn scan_ht_for_desired_multiple(ht: &HashMap<i16, i16>) -> i32 {
-    // O(1)
+    // O(n)
     for k in ht.keys() {
         if ht.contains_key(&(DESIRED_SUM - k)){
             return *k as i32 * (DESIRED_SUM as i32 - *k as i32);
